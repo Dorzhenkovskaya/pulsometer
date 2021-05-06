@@ -38,6 +38,39 @@
             font-size: 16px;
         }
     }
+    .carousel {
+        .slick-prev, .slick-next {
+            img {
+                display: none;
+            }
+        }
+        &__inner {
+            max-width: 100%;
+            img {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+        ul.slick-dots {
+            text-align: center;
+           }
+        ul.slick-dots li {
+            display: inline-block;
+            width: 10%;
+        }
+        .slick-dots button {
+            border-radius: 50%;
+            background-color: #C0C0C0;
+            border: none;
+            color: white;
+            padding: 0 5px 0 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 15px 2px;
+          }
+    }
 }
 @media (max-width: 767px) {
     .header {
@@ -226,6 +259,11 @@
         &_submit {
             font-size: 14px;
             height: 40px;
+        }
+    }
+    .carousel {
+        &__inner {
+            max-width: 100%;
         }
     }
     .catalog {
