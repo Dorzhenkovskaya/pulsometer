@@ -27,8 +27,7 @@ $(document).ready(function(){
             {
               breakpoint: 992,
               settings: {
-                dots: true,
-                arrows: false
+                dots: true
               }
             }
           ]

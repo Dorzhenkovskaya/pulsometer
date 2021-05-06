@@ -27,6 +27,17 @@
     .title_left {
         font-size: 30px;
     }
+    .catalog {
+        .catalog-item {
+            width: 260px;
+        }
+        &__content, .catalog__content_active{
+            justify-content: space-around;
+        }
+        .catalog-item__price {
+            font-size: 16px;
+        }
+    }
 }
 @media (max-width: 767px) {
     .header {
@@ -124,6 +135,11 @@
     .title {
         font-size: 25px;
     }
+    .catalog {
+        .catalog__tab {
+            width: 170px;
+        }
+    }
 }
 @media (max-width: 575px) {
     .header {
@@ -210,6 +226,19 @@
         &_submit {
             font-size: 14px;
             height: 40px;
+        }
+    }
+    .catalog {
+        .catalog__tab {
+            &:nth-child(1) {
+                margin-bottom: 15px;
+            }
+            &:nth-child(2) {
+                margin-bottom: 15px;
+            }
+        }
+        .catalog__tabs {
+            flex-direction: column;
         }
     }
 }
