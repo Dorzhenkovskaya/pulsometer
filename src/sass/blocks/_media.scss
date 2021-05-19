@@ -104,6 +104,31 @@
             line-height: 16px;
         }
     }
+    .overlay {
+        .modal {
+            width: 350px;
+            min-height: 350px;
+            &__subtitle {
+                font-size: 16px;
+            }
+            &__descr {
+                font-size: 13px;
+            }
+            .feed-form {
+                width: 260px;
+                input {
+                    height: 40px;
+                }
+            }
+            .button_submit {
+                height: 40px;
+                font-size: 14px;
+            }
+            &_mini {
+                min-height: 100px;
+            }
+        }
+    }
 }
 @media (max-width: 767px) {
     .header {
@@ -227,6 +252,11 @@
         }
         &__subtitle_mini {
             margin-top: 10px;
+        }
+    }
+    .overlay {
+        .modal {
+            width: 340px;
         }
     }
 }
@@ -363,6 +393,18 @@
             margin: 0 2px;
             img {
                 height: 21px;
+            }
+        }
+    }
+    .overlay {
+        .modal {
+            width: 290px;
+            .feed-form {
+                width: 220px;
+            }
+            &__close {
+                top: 7px;
+                right: 10px;
             }
         }
     }
