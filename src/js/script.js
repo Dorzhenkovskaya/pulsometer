@@ -97,4 +97,22 @@ $(document).ready(function(){
 
       // Masked input
       $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+      // Обработка форм
+      $('form').submit(function(e) {
+        // Отмена стандартного поведения браузера
+        e.preventDefault();
+        //Отправка данных на сервер
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).find("input").val("");
+          $('#consultation, #order').fadeOut();
+          $('.overvlay, #thanks').fadeIn('slow');
+          $('form').trigger('reset');
+        });
+        return false;
+      });
   });
