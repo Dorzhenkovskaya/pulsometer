@@ -101,18 +101,19 @@ $(document).ready(function(){
       // Обработка форм
       $('form').submit(function(e) {
         // Отмена стандартного поведения браузера
-        e.preventDefault();
+            e.preventDefault();
         //Отправка данных на сервер
-        $.ajax({
-          type: "POST",
-          url: "mailer/smart.php",
-          data: $(this).serialize()
-        }).done(function() {
-          $(this).find("input").val("");
-          $('#consultation, #order').fadeOut();
-          $('.overvlay, #thanks').fadeIn('slow');
-          $('form').trigger('reset');
+            $.ajax({
+                type: "POST",
+                url: "mailer/smart.php",
+                data: $(this).serialize()
+            }).done(function() {
+                $(this).find("input").val("");
+                $('#consultation, #order').fadeOut();
+                $('.overlay, #thanks').fadeIn('slow');
+    
+                $('form').trigger('reset');
+            });
+            return false;
         });
-        return false;
-      });
   });
